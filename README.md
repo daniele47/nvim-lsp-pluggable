@@ -22,7 +22,8 @@ rm -f "$HOME/.local/share/nvim/site"
 
 # purge
 ```sh
-rm -f "$HOME/.local/share/nvim-lsp-pluggable"
+rm -f "$HOME/.local/share/nvim/site"
+rm -rf "$HOME/.local/share/nvim-lsp-pluggable"
 ```
 
 # usage
