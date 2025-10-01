@@ -26,6 +26,9 @@ rm -f "$HOME/.local/share/nvim-lsp-pluggable"
 ```
 
 # usage
+```sh
+cd "$HOME/.local/share/nvim-lsp-pluggable"
+```
 
 - install lsp packages in `package/data`
 - link lsp packages to `package/bin`, to have it be included in neovim PATH
