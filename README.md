@@ -5,8 +5,14 @@ provide extra code to allow plugging in lsp functionality into neovim
 ```sh
 INSTALL_PATH="$HOME/.local/share/nvim-lsp-pluggable"
 NVIM_PATH="$HOME/.local/share/nvim/site"
-! [[ -e "$INSTALL_PATH" ]] && git clone https://github.com/daniele47/nvim-lsp-pluggable "$INSTALL_PATH"
-! [[ -e "$NVIM_PATH" ]] && mkdir -p "$(dirname "$NVIM_PATH")" && ln -s "$INSTALL_PATH" "$NVIM_PATH"
+if [[ -e "$NVIM_PATH" ]]; then
+   echo "path already exists!"
+else
+  ! [[ -e "$INSTALL_PATH" ]] && git clone https://github.com/daniele47/nvim-lsp-pluggable "$INSTALL_PATH"
+  mkdir -p "$(dirname "$NVIM_PATH")" && ln -s "$INSTALL_PATH" "$NVIM_PATH"
+  "$NVIM_PATH/init.sh"
+  echo "successful installation!"
+fi
 ```
 
 # uninstallation
