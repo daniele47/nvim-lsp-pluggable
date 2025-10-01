@@ -13,6 +13,7 @@ else
   "$NVIM_PATH/init.sh"
   echo "successful installation!"
 fi
+cd "$HOME/.local/share/nvim-lsp-pluggable"
 ```
 
 # uninstallation
@@ -27,10 +28,6 @@ rm -rf "$HOME/.local/share/nvim-lsp-pluggable"
 ```
 
 # usage
-```sh
-cd "$HOME/.local/share/nvim-lsp-pluggable"
-```
-
 - install lsp packages in `package/data`
 - link lsp packages to `package/bin`, to have it be included in neovim PATH
 - for each lsp, enable it in `plugin/lsp_enable.lua`
