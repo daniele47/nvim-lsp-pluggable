@@ -1,36 +1,10 @@
 # nvim-lsp-pluggable
 provide extra code to allow plugging in lsp functionality into neovim
 
-# installation
-```sh
-INSTALL_PATH="$HOME/.local/share/nvim-lsp-pluggable"
-NVIM_PATH="$HOME/.local/share/nvim/site"
-if [[ -e "$NVIM_PATH" ]]; then
-   echo "path already exists!"
-else
-  ! [[ -e "$INSTALL_PATH" ]] && git clone https://github.com/daniele47/nvim-lsp-pluggable "$INSTALL_PATH"
-  mkdir -p "$(dirname "$NVIM_PATH")" && ln -s "$INSTALL_PATH" "$NVIM_PATH"
-  "$NVIM_PATH/init.sh"
-  echo "successful installation!"
-fi
-```
-
-# uninstallation
-```sh
-rm -f "$HOME/.local/share/nvim/site"
-```
-
-# purge
-```sh
-rm -f "$HOME/.local/share/nvim/site"
-rm -rf "$HOME/.local/share/nvim-lsp-pluggable"
-```
+# install
+- download repo and either link it, or place it directly in `~/.local/share/nvim/site`
 
 # usage
-```sh
-cd "$HOME/.local/share/nvim-lsp-pluggable"
-```
-
 - install lsp packages in `package/data`
 - link lsp packages to `package/bin`, to have it be included in neovim PATH
 - for each lsp, enable it in `plugin/lsp_enable.lua`
