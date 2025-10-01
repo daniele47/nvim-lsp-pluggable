@@ -17,9 +17,7 @@ fi
 
 # uninstallation
 ```sh
-rm -rf "$HOME/.local/share/nvim/site"
-read -rp "Type PURGE to completely purge the installation: " answer
-[[ "$answer" == PURGE ]] && rm -rf "$HOME/.local/share/nvim-lsp-pluggable"
+rm -f "$HOME/.local/share/nvim/site"
 ```
 
 # usage
