@@ -20,6 +20,11 @@ fi
 rm -f "$HOME/.local/share/nvim/site"
 ```
 
+# purge
+```sh
+rm -f "$HOME/.local/share/nvim-lsp-pluggable"
+```
+
 # usage
 
 - install lsp packages in `package/data`
