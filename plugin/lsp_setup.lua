@@ -31,3 +31,5 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
 	return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
+-- include personal bin directory into PATH
+vim.env.PATH = vim.fn.expand("~/.local/share/nvim/site/packages/bin") .. ":" .. vim.env.PATH

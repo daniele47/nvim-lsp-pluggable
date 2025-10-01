@@ -15,7 +15,7 @@ echo "cleaning up packages and configs..."
 rm -rf "$SCRIPT_DIR/packages" "$SCRIPT_DIR/plugin/lsp_enable.lua"
 echo "creating new directories and files for lsp..."
 mkdir "$SCRIPT_DIR"/packages/{data,bin}/ -p
-echo "vim.env.PATH = vim.fn.expand(\"$SCRIPT_DIR/packages/bin\") .. ":" .. vim.env.PATH" > "$SCRIPT_DIR/plugin/lsp_enable.lua"
+echo "-- write here your vim.lsp.enable(...) without worries: this file is ignored!" > "$SCRIPT_DIR/plugin/lsp_enable.lua"
 
 # final message
 echo "
